@@ -1,15 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
+import Navigation from './Navigation';
 
 function Sidebar() {
     return (
         <SidebarStyle>
+            <Navigation/>
         </SidebarStyle>
     )
 }
 
 const SidebarStyle = styled.div `
-    width: 16.3rem;
+    width: 16rem;
     height: 100vh;
     
     position: fixed;
