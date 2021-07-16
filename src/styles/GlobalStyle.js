@@ -12,6 +12,21 @@ const GlobalStyled = createGlobalStyle `
         --font-dark-color: #313131;
         --font-dark-color-2: #151515;
         --sidebar-dark-color: #191d2b;
+        --line-color: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+    }
+
+    ::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey; 
+        border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background:#2e344e; 
+        border-radius: 10px;
     }
 
     * {

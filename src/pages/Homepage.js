@@ -14,7 +14,7 @@ function Homepage() {
                 <Particle/>
             </div>
             <div className="typography">
-                <h1>Hi I'm <span>Phan Duy Tâm</span></h1>
+                <h1>Hi I'm <span> <span>P</span><span>h</span><span>a</span><span>n</span> <span>D</span><span>u</span><span>y</span> <span>T</span><span>â</span><span>m</span> </span></h1>
                 <p>
                     fkjdkfjsfsnsdfsnf djfsaf djsdf sdfjsddf sdkfj sfj fsdfjsdfjsđfkjsdfđajasdk
                     ạdhasaj jdsafafajfjđfs dfjsđfjksdjffss fsdfjsdjfksflksjf sfj sdfskdljdfsdjdfjs facebookdflks
@@ -49,6 +49,18 @@ const HomePageStyled = styled.header `
 
         text-align: center;
         width: 80%;
+
+        h1 {
+            span {
+                span {
+                    transition: all .2s;
+                    &:hover {
+                        transition: all .2s;
+                        color: #fff;
+                    }
+                }
+            }
+        }
 
         p {
             letter-spacing: 1px;
