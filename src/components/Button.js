@@ -17,7 +17,6 @@ const ButtonStyled = styled.a `
     font-size: inherit;
     text-transform: uppercase;
 
-    /* background-color: var(--primary-color); */
     color: var(--white-color);
     transition: all 1s ease;
 

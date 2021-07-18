@@ -21,13 +21,13 @@ function Homepage() {
                     fskjfsjkfsdkljfsdkjf kdkfsdkjfsdkljfsd dsjfsdlf sdjdf sdlfsdj fsdjf sdf sdf dkjfsda
                 </p>
                 <div className="icons">
-                    <a href="https://www.facebook.com/phantam0207/"  className="icon i-facebook">
+                    <a href="https://www.facebook.com/phantam0207/" target="_blank" className="icon i-facebook">
                         <Facebook/>
                     </a>
-                    <a href="https://github.com/jrphan" className="icon i-github">
+                    <a href="https://github.com/jrphan" className="icon i-github" target="_blank">
                         <GitHub/>
                     </a>
-                    <a href="https://www.linkedin.com/in/phan-duy-t%C3%A2m-23b4a4213/" className="icon i-linkedin">
+                    <a href="https://www.linkedin.com/in/phan-duy-t%C3%A2m-23b4a4213/" target="_blank" className="icon i-linkedin">
                         <LinkedIn/>
                     </a>
                 </div>
