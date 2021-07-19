@@ -7,6 +7,7 @@ const GlobalStyled = createGlobalStyle `
         --background-dark-color: #10121A;
         --border-color: #2e344e;
         --background-light-color: #F1F1F1;
+        --background-dark-grey: #191D2B;
         --white-color: #fff;
         --font-light-color: #a4acc4;
         --font-dark-color: #313131;

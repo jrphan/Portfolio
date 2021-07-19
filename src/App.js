@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Sidebar from "./components/Sidebar";
 import Aboutpage from "./pages/Aboutpage";
 import Homepage from "./pages/Homepage";
+import Contactpage from "./pages/Contactpage";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
               <Route path="/portfolios" exact>
               </Route>
               <Route path="/contact" exact>
+                <Contactpage/>
               </Route>
             </Switch>
         </MainContentStyled>
