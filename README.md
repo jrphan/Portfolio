@@ -6,6 +6,20 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### `npm i @material-ui/core`
+
+### `npm i @material-ui/icons`
+
+### `npm i react-intersection-observer`
+
+### `npm i react-router-dom`
+
+### `npm i react-particles-js`
+
+### `npm i styled-components`
+
+### `npm i tsparticles`
+
 ### `yarn start`
 
 Runs the app in the development mode.\

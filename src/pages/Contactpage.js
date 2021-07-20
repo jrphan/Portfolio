@@ -3,6 +3,10 @@ import { InnerLayout, MainLayout } from '../styles/Layouts';
 import styled from 'styled-components';
 import Titles from '../components/Titles';
 import Button from '../components/Button';
+import PhoneOutlinedIcon from '@material-ui/icons/PhoneOutlined';
+import MailOutlineOutlinedIcon from '@material-ui/icons/MailOutlineOutlined';
+import LocationOnOutlinedIcon from '@material-ui/icons/LocationOnOutlined'; 
+import ContactItem from '../components/ContactItem';
 
 function Contactpage() {
     return (
@@ -28,13 +32,29 @@ function Contactpage() {
                                 <textarea id="text-area" name="textarea" cols="30" rows="5" placeholder=" "></textarea>
                                 <label htmlFor="text-area">Enter your Message:</label>
                             </div>
-                            <div className="form-group">
+                            <div className="form-group btn">
                                <Button title={"Send Email"}/>
                             </div>
                         </form>
                     </div>
                     <div className="right-content">
-                        hello
+                        <ContactItem 
+                            icon={<PhoneOutlinedIcon/>} 
+                            title={'Phone:'} 
+                            contact={'+84 0399 638 299'}
+                            href={'tel:0399638299'}
+                        />
+                         <ContactItem 
+                            icon={<MailOutlineOutlinedIcon/>} 
+                            title={'Mail:'} 
+                            contact={'phanduytam0306.ltp@gmail.com'}
+                            href={'mailto:phanduytam0306.ltp@gmail.com'}
+                        />
+                        <ContactItem 
+                            icon={<LocationOnOutlinedIcon/>} 
+                            title={'Location:'} 
+                            contact={'Viet Nam'}
+                        />
                     </div>
                </InnerLayout>
            </ContactStyled>
@@ -49,6 +69,10 @@ const ContactStyled = styled.section `
 
         .form {
             width: 100%;
+
+            .btn {
+                margin-top: 0.8rem;
+            }
 
             &-group {
                 margin-top: 1.5rem;
@@ -124,6 +148,13 @@ const ContactStyled = styled.section `
                     }
                 }
             }
+        }
+
+        .right-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            margin-left: 3rem;
         }
     }
 `;
