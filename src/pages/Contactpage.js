@@ -2,6 +2,7 @@ import React from 'react'
 import { InnerLayout, MainLayout } from '../styles/Layouts';
 import styled from 'styled-components';
 import Titles from '../components/Titles';
+import Button from '../components/Button';
 
 function Contactpage() {
     return (
@@ -24,8 +25,11 @@ function Contactpage() {
                                 <label htmlFor="subject">Enter your subject:</label>
                             </div>
                             <div className="form-group">
-                                <textarea id="text-area" name="textarea" cols="48" rows="5" placeholder=" "></textarea>
+                                <textarea id="text-area" name="textarea" cols="30" rows="5" placeholder=" "></textarea>
                                 <label htmlFor="text-area">Enter your Message:</label>
+                            </div>
+                            <div className="form-group">
+                               <Button title={"Send Email"}/>
                             </div>
                         </form>
                     </div>
@@ -50,6 +54,11 @@ const ContactStyled = styled.section `
                 margin-top: 1.5rem;
                 position: relative;
                 width: 100%;
+
+                a {
+                    padding: 10px 15px;
+                    margin: 0;
+                }
 
                 label {
                     position: absolute;
@@ -97,6 +106,7 @@ const ContactStyled = styled.section `
                     color: var(--white-color);
                     padding: 15px;
                     border-radius: 15px;
+                    width: 100%;
                     resize: none;
                     &:focus {
                         border: 1px solid var(--primary-color);

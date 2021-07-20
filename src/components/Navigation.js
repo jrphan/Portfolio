@@ -6,7 +6,6 @@ import { Facebook } from '@material-ui/icons';
 import { GitHub } from '@material-ui/icons';
 import { LinkedIn } from '@material-ui/icons';
 
-
 function Navigation() {
     return (
         <NavigationStyled>

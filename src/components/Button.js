@@ -18,7 +18,7 @@ const ButtonStyled = styled.a `
     text-transform: uppercase;
 
     color: var(--white-color);
-    transition: all 1s ease;
+    transition: all 0.5s ease;
 
     cursor: pointer;
     border-radius: 10px;
@@ -26,7 +26,7 @@ const ButtonStyled = styled.a `
 
     &:hover {
         background-color: var(--primary-color);
-        transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+        transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
         border-radius: 15px;
     }
 `;
