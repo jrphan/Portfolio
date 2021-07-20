@@ -2,38 +2,52 @@ import React from 'react'
 import { InnerLayout, MainLayout } from '../styles/Layouts';
 import styled from 'styled-components';
 import Titles from '../components/Titles';
-import Button from '../components/Button';
 import PhoneOutlinedIcon from '@material-ui/icons/PhoneOutlined';
 import MailOutlineOutlinedIcon from '@material-ui/icons/MailOutlineOutlined';
 import LocationOnOutlinedIcon from '@material-ui/icons/LocationOnOutlined'; 
 import ContactItem from '../components/ContactItem';
+import emailjs from 'emailjs-com';
+
 
 function Contactpage() {
+
+    function sendEmail(e) {
+        e.preventDefault();
+    
+        emailjs.sendForm('service_xsyn7r6', 'template_7cqyps9', e.target, 'user_FPGFd5W4bQeLHmKJE84Y2')
+          .then(res => {
+              console.log(res);
+              alert('successfully!!!');
+          }).catch(err => {
+              console.log(err);
+          });
+    }
+
     return (
         <MainLayout>
            <ContactStyled>
                <Titles title={"Contact"} span={"Contact"}/>
                <InnerLayout className={'contact-section'}>
                     <div className="left-content">
-                        <form className="form">
+                        <form className="form" onSubmit={sendEmail}>
                             <div className="form-group">
-                                <input type="text" id="name" placeholder=" "/>
+                                <input type="text" id="name" placeholder=" " name="name"/>
                                 <label htmlFor="name">Enter your name:</label>
                             </div>
                             <div className="form-group">
-                                <input type="email" id="email" placeholder=" "/>
+                                <input type="email" id="email" placeholder=" " name="email"/>
                                 <label htmlFor="email">Enter your email:</label>
                             </div>
                             <div className="form-group">
-                                <input type="text" id="subject" placeholder=" "/>
+                                <input type="text" id="subject" placeholder=" " name="subject"/>
                                 <label htmlFor="subject">Enter your subject:</label>
                             </div>
                             <div className="form-group">
-                                <textarea id="text-area" name="textarea" cols="30" rows="5" placeholder=" "></textarea>
+                                <textarea id="text-area" name="message" cols="30" rows="5" placeholder=" "></textarea>
                                 <label htmlFor="text-area">Enter your Message:</label>
                             </div>
                             <div className="form-group btn">
-                               <Button title={"Send Email"}/>
+                               <input type='submit' value="Send Email" className="btn-send"/>
                             </div>
                         </form>
                     </div>
@@ -72,6 +86,29 @@ const ContactStyled = styled.section `
 
             .btn {
                 margin-top: 0.8rem;
+
+                &-send {
+                    padding: 10px 15px;
+                    margin: 0;
+    
+                    display: inline-block;
+                    font-size: inherit;
+                    text-transform: uppercase;
+
+                    color: var(--white-color);
+                    transition: all 0.5s ease;
+
+                    cursor: pointer;
+                    border-radius: 10px;
+                    border: 1px solid var(--primary-color);
+                    width: initial;
+
+                    &:hover {
+                        background-color: var(--primary-color);
+                        transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+                        border-radius: 15px;
+                    }
+                }
             }
 
             &-group {
@@ -79,10 +116,6 @@ const ContactStyled = styled.section `
                 position: relative;
                 width: 100%;
 
-                a {
-                    padding: 10px 15px;
-                    margin: 0;
-                }
 
                 label {
                     position: absolute;
