@@ -1,11 +1,14 @@
-import React from 'react'
+import React from 'react';
+import styled from 'styled-components';
 
 function Resumepage() {
     return (
-        <div>
+        <ResumeStyled>
             Resume
-        </div>
+        </ResumeStyled>
     )
 }
+
+const ResumeStyled = styled.section ``;
 
 export default Resumepage
