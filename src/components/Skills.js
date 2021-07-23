@@ -1,0 +1,70 @@
+import React from 'react';
+import styled from 'styled-components';
+import { MainLayout } from '../styles/Layouts';
+import { InnerLayout } from '../styles/Layouts';
+import Titles from './Titles';
+import html5 from '../img/html-5.png';
+import css3 from '../img/css.png';
+import js from '../img/js.svg.png';
+import react from '../img/react.png';
+
+function Skills() {
+    return (
+        <SkillsStyled>
+            <MainLayout>
+                <Titles title={'My skills'} span={'My skills'}/>
+                <InnerLayout className={'skills'}>
+                    <div className='skill'>
+                        <img src={html5} alt="logo"/>
+                    </div>
+                    <div className='skill'>
+                        <img src={css3} alt="logo"/>
+                    </div>
+                    <div className='skill'>
+                        <img src={js} alt="logo"/>
+                    </div>
+                    <div className='skill'>
+                        <img src={react} alt="logo"/>
+                    </div>
+                </InnerLayout>
+            </MainLayout>
+        </SkillsStyled>
+    )
+}
+
+const SkillsStyled = styled.section `
+    .skills {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .skill {
+            width: 48%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 3rem 0;
+            margin: 2rem 0;
+            box-shadow: 0px 20px 35px rgba(0, 0, 0, 0.3);
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            transition: all 0.5s ease;
+
+            &:hover {
+                border: 1px solid var(--primary-color);
+                transition: all 0.5s ease;
+            }
+
+            &:nth-child(2n + 1) {
+                margin-right: 2rem;
+            }
+            
+            img {
+                width: 15rem;
+                height: 15rem;
+            }
+        }
+    }
+`;
+
+export default Skills

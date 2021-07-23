@@ -4,6 +4,7 @@ import Sidebar from "./components/Sidebar";
 import Aboutpage from "./pages/Aboutpage";
 import Homepage from "./pages/Homepage";
 import Contactpage from "./pages/Contactpage";
+import Resumepage from "./pages/Resumepage";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
                 <Aboutpage/>
               </Route>
               <Route path="/resume" exact>
+                <Resumepage/>
               </Route>
               <Route path="/portfolios" exact>
               </Route>
