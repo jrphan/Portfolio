@@ -23,21 +23,21 @@ function App() {
           <Sidebar/>
           <MainContentStyled>
               <Switch>
-                <Redirect exact from="/" to="/home"/>
+                <Redirect exact from="/" to="/Portfolio/home"/>
 
-                <Route path="/home" exact>
+                <Route path="/Portfolio/home" exact>
                   <Homepage/>
                 </Route> 
-                <Route path="/about" exact>
+                <Route path="/Portfolio/about" exact>
                   <Aboutpage/>
                 </Route>
-                <Route path="/resume" exact>
+                <Route path="/Portfolio/resume" exact>
                   <Resumepage/>
                 </Route>
-                <Route path="/portfolios" exact>
+                <Route path="/Portfolio/portfolios" exact>
                   <Portfoliopage/>
                 </Route>
-                <Route path="/contact" exact>
+                <Route path="/Portfolio/contact" exact>
                   <Contactpage/>
                 </Route>
               </Switch>
