@@ -1,0 +1,2 @@
+(this.webpackJsonpportfolio=this.webpackJsonpportfolio||[]).push([[8],{395:function(o,t,i){"use strict";i.r(t);i(0);var r=i(2);t.default=function(){return Object(r.jsx)("div",{children:"Portfoliopage"})}}}]);
+//# sourceMappingURL=8.737d691d.chunk.js.map
