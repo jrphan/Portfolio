@@ -12,13 +12,13 @@ function Navigation() {
             <div className="avatar">
                 <img src={avatar} alt="avatar"/>
                 <div className="icons">
-                    <a href="https://www.facebook.com/phantam0207/" target="_blank" className="icon i-facebook">
+                    <a href="https://www.facebook.com/phantam0207/" target="_blank" rel="noreferrer" className="icon i-facebook">
                         <Facebook/>
                     </a>
-                    <a href="https://github.com/jrphan" target="_blank" className="icon i-github">
+                    <a href="https://github.com/jrphan" target="_blank" rel="noreferrer" className="icon i-github">
                         <GitHub/>
                     </a>
-                    <a href="https://www.linkedin.com/in/phan-duy-t%C3%A2m-23b4a4213/" target="_blank" className="icon i-linkedin">
+                    <a href="https://www.linkedin.com/in/phan-duy-t%C3%A2m-23b4a4213/" rel="noreferrer" target="_blank" className="icon i-linkedin">
                         <LinkedIn/>
                     </a>
                 </div>

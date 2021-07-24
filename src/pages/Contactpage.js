@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { InnerLayout, MainLayout } from '../styles/Layouts';
 import styled from 'styled-components';
 import Titles from '../components/Titles';
@@ -10,17 +10,51 @@ import emailjs from 'emailjs-com';
 
 
 function Contactpage() {
+    const [valueName, setValueName] = useState('');
+    const [valueEmail, setValueEmail] = useState('');
+    const [valueSub, setValueSub] = useState('');
+    const [valueMessage, setValueMessage] = useState('');
+
+    function handleValueChangeName(e) {
+        setValueName(e.target.value);
+    }
+
+    function handleValueChangeEmail(e) {
+        setValueEmail(e.target.value);
+    }
+
+    function handleValueChangeSub(e) {
+        setValueSub(e.target.value);
+    }
+
+    function handleValueChangeMess(e) {
+        setValueMessage(e.target.value);   
+    }
 
     function sendEmail(e) {
         e.preventDefault();
+
+        if(valueName === '') {
+            alert('Vui lòng nhập Tên!!!');
+        } else if (valueEmail === '') {
+            alert('Vui lòng nhập Email!!!')
+        } else if (valueSub === '') {
+            alert ('Vui lòng nhập chủ đề!!!')
+        } else if (valueMessage === '') {
+            alert('Vui lòng nhập Message!!!');
+        } else {
+            emailjs.sendForm('service_xsyn7r6', 'template_7cqyps9', e.target, 'user_FPGFd5W4bQeLHmKJE84Y2')
+              .then(res => {
+                  alert('successfully!!!');
+                  setValueName('');
+                  setValueEmail('');
+                  setValueSub('');
+                  setValueMessage('');
+              }).catch(err => {
+                  console.log(err);
+              });
+        }
     
-        emailjs.sendForm('service_xsyn7r6', 'template_7cqyps9', e.target, 'user_FPGFd5W4bQeLHmKJE84Y2')
-          .then(res => {
-              console.log(res);
-              alert('successfully!!!');
-          }).catch(err => {
-              console.log(err);
-          });
     }
 
     return (
@@ -31,19 +65,19 @@ function Contactpage() {
                     <div className="left-content">
                         <form className="form" onSubmit={sendEmail}>
                             <div className="form-group">
-                                <input type="text" id="name" placeholder=" " name="name"/>
+                                <input type="text" id="name" placeholder=" " name="name" value={valueName} onChange={handleValueChangeName}/>
                                 <label htmlFor="name">Enter your name:</label>
                             </div>
                             <div className="form-group">
-                                <input type="email" id="email" placeholder=" " name="email"/>
+                                <input type="email" id="email" placeholder=" " name="email" value={valueEmail} onChange={handleValueChangeEmail}/>
                                 <label htmlFor="email">Enter your email:</label>
                             </div>
                             <div className="form-group">
-                                <input type="text" id="subject" placeholder=" " name="subject"/>
+                                <input type="text" id="subject" placeholder=" " name="subject" value={valueSub} onChange={handleValueChangeSub}/>
                                 <label htmlFor="subject">Enter your subject:</label>
                             </div>
                             <div className="form-group">
-                                <textarea id="text-area" name="message" cols="30" rows="5" placeholder=" "></textarea>
+                                <textarea id="text-area" name="message" cols="30" rows="5" placeholder=" " value={valueMessage} onChange={handleValueChangeMess}></textarea>
                                 <label htmlFor="text-area">Enter your Message:</label>
                             </div>
                             <div className="form-group btn">
