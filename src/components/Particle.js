@@ -16,7 +16,8 @@ function Particle() {
                     }
                   },
                   color:{
-                    value: '#2e344e'
+                    // value: '#2e344e'
+                    value: '#007bff'
                   },
                   shape:{
                     type: 'polygon',

@@ -12,7 +12,7 @@ function ReviewItem({text}) {
 const ReviewItemStyled = styled.div `
     width: 48%;
     padding: 2rem 1rem;
-    border-left: 6px solid var(--border-color);
+    border-left: 3px solid var(--border-color);
     background-color: var(--background-dark-grey);
     position: relative;
     border-radius: 20px;

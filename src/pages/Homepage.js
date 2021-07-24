@@ -16,9 +16,7 @@ function Homepage() {
             <div className="typography">
                 <h1>Hi I'm <span> <span>P</span><span>h</span><span>a</span><span>n</span> <span>D</span><span>u</span><span>y</span> <span>T</span><span>â</span><span>m</span> </span></h1>
                 <p>
-                    fkjdkfjsfsnsdfsnf djfsaf djsdf sdfjsddf sdkfj sfj fsdfjsdfjsđfkjsdfđajasdk
-                    ạdhasaj jdsafafajfjđfs dfjsđfjksdjffss fsdfjsdjfksflksjf sfj sdfskdljdfsdjdfjs facebookdflks
-                    fskjfsjkfsdkljfsdkjf kdkfsdkjfsdkljfsd dsjfsdlf sdjdf sdlfsdj fsdjf sdf sdf dkjfsda
+                   I'm a creative front-end Developer. <br/> I love create polished and meaningful user experience.
                 </p>
                 <div className="icons">
                     <a href="https://www.facebook.com/phantam0207/" target="_blank" rel="noreferrer" className="icon i-facebook">
@@ -65,6 +63,7 @@ const HomePageStyled = styled.header `
         p {
             letter-spacing: 1px;
             line-height: 25px;
+            font-size: 1.05rem;
         }
 
         .icons {
@@ -73,6 +72,7 @@ const HomePageStyled = styled.header `
             justify-content: center;
 
             cursor: pointer;
+            padding: 0.2rem 0;
             
             
             .icon {

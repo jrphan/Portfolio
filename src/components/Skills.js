@@ -37,6 +37,8 @@ const SkillsStyled = styled.section `
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        padding-top: 5rem;
+        padding-bottom: 0;
 
         .skill {
             width: 48%;
