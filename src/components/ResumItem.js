@@ -26,8 +26,22 @@ const ResumeItemStyled = styled.div `
         display: flex;
         align-items: flex-start;
         justify-content: flex-start;
+        position: relative;
+
         p {
             display: inline-block;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: -15px;
+            top: 7px;
+            height: 5px;
+            width: 5px;
+            border-radius: 50%;
+            border: 1px solid var(--border-color);
+
         }
     }
 

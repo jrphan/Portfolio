@@ -1,7 +1,7 @@
 import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
 import styled from "styled-components";
 import Sidebar from "./components/Sidebar";
-import React, { Suspense } from "react";
+// import React, { Suspense } from "react"; 
 import Homepage from "./pages/Homepage";
 import Aboutpage from "./pages/Aboutpage";
 import Resumepage from "./pages/Resumepage";
@@ -23,21 +23,21 @@ function App() {
           <Sidebar/>
           <MainContentStyled>
               <Switch>
-                <Redirect exact from="/" to="/Portfolio/home"/>
+                <Redirect exact from="/" to="/home"/>
 
-                <Route path="/Portfolio/home" exact>
+                <Route path="/home" exact>
                   <Homepage/>
                 </Route> 
-                <Route path="/Portfolio/about" exact>
+                <Route path="/about" exact>
                   <Aboutpage/>
                 </Route>
-                <Route path="/Portfolio/resume" exact>
+                <Route path="/resume" exact>
                   <Resumepage/>
                 </Route>
-                <Route path="/Portfolio/portfolios" exact>
+                <Route path="/portfolios" exact>
                   <Portfoliopage/>
                 </Route>
-                <Route path="/Portfolio/contact" exact>
+                <Route path="/contact" exact>
                   <Contactpage/>
                 </Route>
               </Switch>

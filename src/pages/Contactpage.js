@@ -7,6 +7,7 @@ import MailOutlineOutlinedIcon from '@material-ui/icons/MailOutlineOutlined';
 import LocationOnOutlinedIcon from '@material-ui/icons/LocationOnOutlined'; 
 import ContactItem from '../components/ContactItem';
 import emailjs from 'emailjs-com';
+// import MapContainer from '../components/MapContainer';
 
 
 function Contactpage() {
@@ -104,6 +105,7 @@ function Contactpage() {
                             contact={'Viet Nam'}
                         />
                     </div>
+                    {/* <MapContainer/> */}
                </InnerLayout>
            </ContactStyled>
         </MainLayout>
