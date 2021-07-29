@@ -14,6 +14,7 @@ const GlobalStyled = createGlobalStyle `
         --font-dark-color-2: #151515;
         --sidebar-dark-color: #191d2b;
         --line-color: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+        --xs-width: 578px;
     }
 
     ::-webkit-scrollbar {
@@ -23,6 +24,7 @@ const GlobalStyled = createGlobalStyle `
     ::-webkit-scrollbar-track {
         box-shadow: inset 0 0 5px grey; 
         border-radius: 10px;
+
     }
 
     ::-webkit-scrollbar-thumb {
@@ -39,12 +41,13 @@ const GlobalStyled = createGlobalStyle `
         text-decoration: none;
 
         font-family: 'Nunito', sans-serif;
-        font-size: 1.005rem;
+        font-size: 1rem;
     }
 
-    body {
+    html, body {
         background-color: var(--background-dark-color);
         color: var(--font-light-color);
+        overflow-x: hidden;
     }
 
     a {
@@ -62,6 +65,22 @@ const GlobalStyled = createGlobalStyle `
             color: var(--primary-color);
         }
     }
+
+    .menu {
+        display: none;
+        @media screen and (max-width: 576px) {
+            display: block;
+            position: fixed;
+            top: 4%;
+            right: 2%;
+            z-index: 15;
+
+            .btn {
+                color: #fff;
+            }
+        }
+    }
+    
 `;
 
 export default GlobalStyled;

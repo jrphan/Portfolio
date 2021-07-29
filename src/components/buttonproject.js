@@ -1,6 +1,7 @@
 import React from 'react';
 import styled  from 'styled-components';
 
+
 function buttonproject({filter, button}) {
     return (
         <ButtonStyled>
@@ -8,7 +9,7 @@ function buttonproject({filter, button}) {
                 button.map((but, i) => {
                     return <button key={i} onClick={() => {
                         filter(but);
-                    } }>
+                    }}>
                         {but}
                     </button>
                 })
@@ -20,6 +21,7 @@ function buttonproject({filter, button}) {
 const ButtonStyled = styled.div `
     margin-bottom: 1.5rem;
     margin-top: 0.5rem;
+
     button {
         padding: 0.3rem 0.7rem;
         margin-right: 1rem;

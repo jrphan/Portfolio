@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
+// import styled from 'styled-components';
 import { MainLayout, InnerLayout } from '../styles/Layouts';
 import Titles from '../components/Titles';
 import projects from '../data/project';
@@ -10,7 +10,7 @@ const allButtons = ['All', ...new Set(projects.map(item => item.category))]
 
 function Portfoliopage() {
     const [menuItem, setMenuItem] = useState(projects);
-    const [button, setButton] = useState(allButtons);
+    const [button] = useState(allButtons);
 
     const filter = (button) => {
         if(button === 'All') {
@@ -32,8 +32,5 @@ function Portfoliopage() {
         </MainLayout>
     )
 }
-
-const PortfolioStyled = styled.section `
-`;
 
 export default Portfoliopage

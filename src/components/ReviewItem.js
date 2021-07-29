@@ -17,9 +17,16 @@ const ReviewItemStyled = styled.div `
     position: relative;
     border-radius: 20px;
     margin-top: 2rem;
+    @media screen and (max-width: 576px) {
+        width: 100%;
+        margin-top: 3rem;
+    }
 
     &:nth-child(2n+1) {
         margin-right: 1rem;
+        @media screen and (max-width: 576px) {
+            margin-right: 0;
+        }
     }
 
     &::after {

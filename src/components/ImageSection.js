@@ -42,9 +42,16 @@ function ImageSection() {
 const ImageSectionStyled = styled.div `
     display: flex;
 
+    @media screen and (max-width: 576px) {
+        flex-direction: column;
+    }
+
     .img-content {
        margin-top: 7rem;
        width: 100%;
+       @media screen and (max-width: 576px) {
+            margin-top: 6rem;
+        }
 
        img {
            width: 90%;
@@ -54,6 +61,9 @@ const ImageSectionStyled = styled.div `
 
     .text-content {
         margin-top: 7rem;
+        @media screen and (max-width: 576px) {
+            margin-top: 2rem;
+        }
 
         h4 {
             font-size: 2rem;

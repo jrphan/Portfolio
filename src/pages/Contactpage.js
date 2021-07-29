@@ -116,9 +116,13 @@ const ContactStyled = styled.section `
     .contact-section {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        @media screen and (max-width: 576px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
 
         .form {
             width: 100%;
+            
 
             .btn {
                 margin-top: 0.8rem;
@@ -224,6 +228,10 @@ const ContactStyled = styled.section `
             flex-direction: column;
             justify-content: space-around;
             margin-left: 3rem;
+            @media screen and (max-width: 576px) {
+                margin-left: 0;
+                margin-top: 2rem;
+            }
         }
     }
 `;

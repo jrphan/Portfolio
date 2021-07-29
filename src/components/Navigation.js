@@ -6,7 +6,7 @@ import { Facebook } from '@material-ui/icons';
 import { GitHub } from '@material-ui/icons';
 import { LinkedIn } from '@material-ui/icons';
 
-function Navigation() {
+function Navigation({btn, setBtn, navToggle, setNavToggle}) {
     return (
         <NavigationStyled>
             <div className="avatar">
@@ -24,19 +24,34 @@ function Navigation() {
                 </div>
             </div>
             <ul className="nav-items">
-                <li className="nav-item">
+                <li className="nav-item" onClick={() => {
+                    setNavToggle(!navToggle)
+                    setBtn(!btn)
+                }}>
                     <NavLink to="/home" activeClassName="active-class" exact>Home</NavLink>
                 </li>
-                <li className="nav-item">
+                <li className="nav-item" onClick={() => {
+                    setNavToggle(!navToggle)
+                    setBtn(!btn)
+                }}>
                     <NavLink to="/about" activeClassName="active-class" exact>About</NavLink>
                 </li>
-                <li className="nav-item">
+                <li className="nav-item" onClick={() => {
+                    setNavToggle(!navToggle)
+                    setBtn(!btn)
+                }}>
                     <NavLink to="/resume" activeClassName="active-class" exact>Resume</NavLink>
                 </li>
-                <li className="nav-item">
+                <li className="nav-item" onClick={() => {
+                    setNavToggle(!navToggle)
+                    setBtn(!btn)
+                }}>
                     <NavLink to="/portfolios" activeClassName="active-class" exact>Projects</NavLink>
                 </li>
-                <li className="nav-item">
+                <li className="nav-item" onClick={() => {
+                    setNavToggle(!navToggle)
+                    setBtn(!btn)
+                }}>
                     <NavLink to="/contact" activeClassName="active-class" exact>Contact</NavLink>
                 </li>
             </ul>

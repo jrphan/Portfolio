@@ -52,6 +52,10 @@ const SkillsStyled = styled.section `
             border: 1px solid var(--border-color);
             transition: all 0.5s ease;
 
+            @media screen and (max-width: 576px) {
+                width: 100%;
+            }
+
             &:hover {
                 border: 1px solid var(--primary-color);
                 transition: all 0.5s ease;
@@ -59,6 +63,9 @@ const SkillsStyled = styled.section `
 
             &:nth-child(2n + 1) {
                 margin-right: 2rem;
+                @media screen and (max-width: 576px) {
+                    margin-right: 0;
+                }
             }
             
             img {

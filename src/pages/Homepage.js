@@ -49,9 +49,17 @@ const HomePageStyled = styled.header `
         width: 80%;
 
         h1 {
+            @media screen and (max-width: 576px) {
+                font-size: 2rem;
+            }
             span {
                 span {
                     transition: all .2s;
+
+            .btn {
+                color: #fff;
+            }
+        }
                     &:hover {
                         transition: all .2s;
                         color: #fff;

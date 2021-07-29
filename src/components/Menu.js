@@ -31,6 +31,10 @@ const MenuStyled = styled.div `
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 2rem;
 
+    @media screen and (max-width: 576px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
     .grid-item {
         border: 2px solid var(--border-color);
         border-radius: 10px;
@@ -44,6 +48,10 @@ const MenuStyled = styled.div `
             display: block;
             position: relative;
             padding: 1rem;
+
+            @media screen and (max-width: 576px) {
+                padding: 2rem;
+            }
 
             &-img {
                 img {

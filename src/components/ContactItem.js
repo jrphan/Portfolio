@@ -22,7 +22,9 @@ function ContactItem({icon, title, contact, contact1, href}) {
 
 const ContactItemStyled = styled.div `
     padding: 2rem;
-    /* margin-top: 1.5rem; */
+    @media screen and (max-width: 576px) {
+        margin-top: 1.5rem;
+    }
 
     background-color: var(--background-dark-grey);
     border-radius: 15px;
