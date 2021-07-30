@@ -2,6 +2,7 @@ import wooder from '../img/wooder.png';
 import Gboxs from '../img/gboxs.png';
 import nicebeaty from '../img/nicebeauty.png';
 import todolist from '../img/todolist.png'
+// import portfolio from '../img/portfolios.png'
 
 const project = [
     {
@@ -10,7 +11,7 @@ const project = [
         img: wooder,
         link: 'https://jrphan.github.io/Wooder/',
         title: 'Wooder',
-        text: 'Dự án tại CFD'
+        text: 'HTLM5, SCSS, Javascript.'
     },
     {
         id: 2,
@@ -18,7 +19,7 @@ const project = [
         img: Gboxs,
         link: 'https://jrphan.github.io/Gbox/',
         title: 'Gboxs',
-        text: 'Dự án tại CFD'
+        text: 'HTLM5, SCSS, Javascript.'
     },
     {
         id: 3,
@@ -26,7 +27,7 @@ const project = [
         img: nicebeaty,
         link: 'https://jrphan.github.io/nice-beauty/',
         title: 'Nice beauty',
-        text: 'Dự án án cá nhân.'
+        text: 'HTLM5, SCSS, Javascript.'
     },
     {
         id: 4,
@@ -34,8 +35,16 @@ const project = [
         img: todolist,
         link: 'https://jrphan.github.io/TodoList/',
         title: 'Todo List',
-        text: 'Dự án án cá nhân.'
+        text: 'React js basic.'
     },
+    // {
+    //     id: 5,
+    //     category: 'react js',
+    //     img: portfolio,
+    //     link: 'https://jrphan.github.io/TodoList/',
+    //     title: 'Portfolios',
+    //     text: 'React js, Styled-component, Email js, Material UI.'
+    // },
 ]
 
 export default project

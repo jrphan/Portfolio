@@ -13,11 +13,8 @@ function Menu({menuItem}) {
                             </div>
                             <h5>{item.title}</h5>
                             <p>{item.text}</p>
-                            <ul>
-                                <li>
-                                    <a href={item.link} target="_blank" rel="noreferrer">{item.link}</a>
-                                </li>
-                            </ul>
+                            {/* <p>{item.des}</p> */}
+                            <a href={item.link} target="_blank" rel="noreferrer">Link: {item.link}</a>
                         </div>
                     </div>
                 })
@@ -53,6 +50,11 @@ const MenuStyled = styled.div `
                 padding: 2rem;
             }
 
+            h5 {
+                font-size: 1.5rem;
+                padding: 0.5rem 1rem;
+            }
+
             &-img {
                 img {
                     border-radius: 10px;
@@ -61,6 +63,10 @@ const MenuStyled = styled.div `
                     object-fit: cover;
                     opacity: 0.9;
                 }
+            }
+
+            p, a {
+                padding: 0 1rem;
             }
         }
     }
