@@ -28,9 +28,14 @@ const ResumeItemStyled = styled.div `
         justify-content: flex-start;
         position: relative;
 
+        @media screen and (max-width: 578px) {
+            margin-right: 2rem;
+        }
+ 
         p {
             display: inline-block;
         }
+
 
         &::before {
             content: '';
