@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+import PDT from '../data/PDT.pdf'
 
 function Button({title}) {
     return (
-        <ButtonStyled>
+        <ButtonStyled href={PDT} download="PDT Portfolios">
             {title}
         </ButtonStyled>
     )
