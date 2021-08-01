@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
-import PDT from '../data/PDT.pdf'
+import PDT from '../data/PDT.pdf';
+import Aos from 'aos';
+import "aos/dist/aos.css";
 
 function Button({title}) {
+    useEffect(() => {
+        Aos.init({duration: 1000});
+    },[])
+    
     return (
-        <ButtonStyled href={PDT} download="PDT Portfolios">
+        <ButtonStyled href={PDT} download="PDT Portfolios" data-aos="fade-up" data-aos-delay="300">
             {title}
         </ButtonStyled>
     )

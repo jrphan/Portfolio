@@ -20,6 +20,9 @@ In the project directory, you can run:
 
 ### `npm i tsparticles`
 
+
+###`npm install ityped`
+
 ### `yarn start`
 
 Runs the app in the development mode.\

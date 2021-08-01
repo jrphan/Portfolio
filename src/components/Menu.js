@@ -1,13 +1,19 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import styled from 'styled-components';
+import Aos from 'aos';
+import "aos/dist/aos.css";
 
 function Menu({menuItem}) {
+    useEffect(() => {
+        Aos.init({duration: 1000});
+    },[])
+
     return (
         <MenuStyled>
             {
                 menuItem.map((item) => {
-                    return <div className="grid-item" key={item.id}>
-                        <div className="project">
+                    return <div className="grid-item" key={item.id} data-aos="fade-up">
+                        <div className="project" >
                             <div className="project-img">
                                 <img src={item.img} alt=""/>
                             </div>

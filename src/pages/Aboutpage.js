@@ -5,6 +5,7 @@ import ReviewSection from '../components/ReviewSection';
 import Titles from '../components/Titles';
 import { MainLayout } from '../styles/Layouts';
 
+
 function Aboutpage() {
     return (
         <MainLayout>

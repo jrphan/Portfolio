@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import { MainLayout } from '../styles/Layouts';
 import { InnerLayout } from '../styles/Layouts';
@@ -7,13 +7,19 @@ import html5 from '../img/html-5.png';
 import css3 from '../img/css.png';
 import js from '../img/js.svg.png';
 import react from '../img/react.png';
+import Aos from 'aos';
+import "aos/dist/aos.css";
 
 function Skills() {
+    useEffect(() => {
+        Aos.init({duration: 1000});
+    },[])
+
     return (
         <SkillsStyled>
             <MainLayout>
                 <Titles title={'My skills'} span={'My skills'}/>
-                <InnerLayout className={'skills'}>
+                <InnerLayout className={'skills'} data-aos="fade-up">
                     <div className='skill'>
                         <img src={html5} alt="logo"/>
                     </div>
@@ -23,7 +29,7 @@ function Skills() {
                     <div className='skill'>
                         <img src={js} alt="logo"/>
                     </div>
-                    <div className='skill'>
+                    <div className='skill' >
                         <img src={react} alt="logo"/>
                     </div>
                 </InnerLayout>

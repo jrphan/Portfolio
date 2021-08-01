@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
+import Aos from 'aos';
+import "aos/dist/aos.css";
 
 function ReviewItem({text}) {
+    useEffect(() => {
+        Aos.init({duration: 1000});
+    },[])
+
     return (
-        <ReviewItemStyled>
+        <ReviewItemStyled  data-aos="fade-up">
             <p>{text}</p>
         </ReviewItemStyled>
     )

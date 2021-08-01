@@ -1,24 +1,41 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import Particle from '../components/Particle';
 import { Facebook } from '@material-ui/icons';
 import { GitHub } from '@material-ui/icons';
 import { LinkedIn } from '@material-ui/icons';
-
+import { init } from 'ityped';
+import Aos from 'aos';
+import "aos/dist/aos.css";
 
 
 function Homepage() {
+    const textRef = useRef();
+
+    useEffect(() => {
+        Aos.init({duration: 1000});
+    },[])
+
+    useEffect(() => {
+        init(textRef.current, {
+            strings: ['Phan Duy Tâm', 'Front-end Developer'],
+            backDelay: 1500,
+            showCursor: true,
+            backSpeed: 80
+        })
+    },[])
+
     return (
         <HomePageStyled>
             <div className="p-particles-js">
                 <Particle/>
             </div>
             <div className="typography">
-                <h1>Hi I'm <span> <span>P</span><span>h</span><span>a</span><span>n</span> <span>D</span><span>u</span><span>y</span> <span>T</span><span>â</span><span>m</span> </span></h1>
-                <p>
+                <h1 data-aos="zoom-out">Hi I'm <span ref={textRef}></span></h1>
+                <p data-aos="fade-up" data-aos-delay="200">
                    I'm a creative front-end Developer. <br/> I love create polished and meaningful user experience.
                 </p>
-                <div className="icons">
+                <div className="icons" data-aos="fade-up" data-aos-delay="300">
                     <a href="https://www.facebook.com/phantam0207/" target="_blank" rel="noreferrer" className="icon i-facebook">
                         <Facebook/>
                     </a>
@@ -50,22 +67,24 @@ const HomePageStyled = styled.header `
 
         h1 {
             @media screen and (max-width: 576px) {
-                font-size: 2rem;
-            }
-            span {
+                font-size: 1.5rem;
                 span {
-                    transition: all .2s;
-
-            .btn {
-                color: #fff;
-            }
-        }
-                    &:hover {
-                        transition: all .2s;
-                        color: #fff;
-                    }
+                    font-size: 1.63rem;
                 }
             }
+
+            .ityped-cursor {
+                animation: blink 1s infinite;
+            }
+
+            @keyframes blink {
+                50% {
+                    opacity: 1;
+                }
+                100% {
+                    opacity: 0;
+                }
+            } 
         }
 
         p {

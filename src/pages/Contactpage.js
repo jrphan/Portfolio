@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { InnerLayout, MainLayout } from '../styles/Layouts';
 import styled from 'styled-components';
 import Titles from '../components/Titles';
@@ -8,6 +8,8 @@ import LocationOnOutlinedIcon from '@material-ui/icons/LocationOnOutlined';
 import ContactItem from '../components/ContactItem';
 import emailjs from 'emailjs-com';
 // import MapContainer from '../components/MapContainer';
+import Aos from 'aos';
+import "aos/dist/aos.css";
 
 
 function Contactpage() {
@@ -15,6 +17,10 @@ function Contactpage() {
     const [valueEmail, setValueEmail] = useState('');
     const [valueSub, setValueSub] = useState('');
     const [valueMessage, setValueMessage] = useState('');
+
+    useEffect(() => {
+        Aos.init({duration: 1000});
+    },[])
 
     function handleValueChangeName(e) {
         setValueName(e.target.value);
@@ -65,28 +71,28 @@ function Contactpage() {
                <InnerLayout className={'contact-section'}>
                     <div className="left-content">
                         <form className="form" onSubmit={sendEmail}>
-                            <div className="form-group">
+                            <div className="form-group" data-aos="fade-up">
                                 <input type="text" id="name" placeholder=" " name="name" value={valueName} onChange={handleValueChangeName}/>
                                 <label htmlFor="name">Enter your name:</label>
                             </div>
-                            <div className="form-group">
+                            <div className="form-group" data-aos="fade-up" data-aos-delay="200">
                                 <input type="email" id="email" placeholder=" " name="email" value={valueEmail} onChange={handleValueChangeEmail}/>
                                 <label htmlFor="email">Enter your email:</label>
                             </div>
-                            <div className="form-group">
+                            <div className="form-group" data-aos="fade-up" data-aos-delay="300">
                                 <input type="text" id="subject" placeholder=" " name="subject" value={valueSub} onChange={handleValueChangeSub}/>
                                 <label htmlFor="subject">Enter your subject:</label>
                             </div>
-                            <div className="form-group">
+                            <div className="form-group" data-aos="fade-up" data-aos-delay="400">
                                 <textarea id="text-area" name="message" cols="30" rows="5" placeholder=" " value={valueMessage} onChange={handleValueChangeMess}></textarea>
                                 <label htmlFor="text-area">Enter your Message:</label>
                             </div>
-                            <div className="form-group btn">
+                            <div className="form-group btn" data-aos="fade-up" data-aos-delay="500" >
                                <input type='submit' value="Send Email" className="btn-send"/>
                             </div>
                         </form>
                     </div>
-                    <div className="right-content">
+                    <div className="right-content" data-aos="fade-up">
                         <ContactItem 
                             icon={<PhoneOutlinedIcon/>} 
                             title={'Phone:'} 
