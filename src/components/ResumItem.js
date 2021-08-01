@@ -1,16 +1,9 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import Aos from 'aos';
-import "aos/dist/aos.css";
-
 
 function ResumItem({time, title, subtitle, text, hreflink, link}) {
-    useEffect(() => {
-        Aos.init({duration: 1000});
-    },[])
-
     return (
-        <ResumeItemStyled data-aos="fade-up" data-aos-delay="100">
+        <ResumeItemStyled>
             <div className="time">
                 <p>{time}</p>
             </div>

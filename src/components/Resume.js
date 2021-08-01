@@ -6,7 +6,6 @@ import ResumItem from './ResumItem';
 import SmallTitle from './SmallTitle';
 import Titles from './Titles';
 
-
 function Resume() {
     return (
         <ResumeComponentStyled>

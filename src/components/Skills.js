@@ -19,17 +19,17 @@ function Skills() {
         <SkillsStyled>
             <MainLayout>
                 <Titles title={'My skills'} span={'My skills'}/>
-                <InnerLayout className={'skills'} data-aos="fade-up">
-                    <div className='skill'>
+                <InnerLayout className={'skills'}>
+                    <div className='skill' data-aos="zoom-out">
                         <img src={html5} alt="logo"/>
                     </div>
-                    <div className='skill'>
+                    <div className='skill' data-aos="zoom-out">
                         <img src={css3} alt="logo"/>
                     </div>
-                    <div className='skill'>
+                    <div className='skill' data-aos="zoom-out">
                         <img src={js} alt="logo"/>
                     </div>
-                    <div className='skill' >
+                    <div className='skill' data-aos="zoom-out">
                         <img src={react} alt="logo"/>
                     </div>
                 </InnerLayout>
