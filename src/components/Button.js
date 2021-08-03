@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
-import PDT from '../data/PDT.pdf';
+import PDT from '../data/PhanDuyTam.pdf';
 import Aos from 'aos';
 import "aos/dist/aos.css";
 

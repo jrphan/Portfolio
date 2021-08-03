@@ -10,10 +10,10 @@ function ReviewSection() {
             <Titles title={'My Hobby'} span={'My Hobby'}/>
             <InnerLayout>
                 <div className="reviews">
-                    <ReviewItem text={'hello'}/>
-                    <ReviewItem text={'hello 2'}/>
-                    <ReviewItem text={'hello 2'}/>
-                    <ReviewItem text={'hello 2'}/>
+                    <ReviewItem text={'Football'}/>
+                    <ReviewItem text={'Swimming'}/>
+                    <ReviewItem text={'Gaming'}/>
+                    <ReviewItem text={'Program'}/>
                 </div>
             </InnerLayout>
         </ReviewSectionStyled>

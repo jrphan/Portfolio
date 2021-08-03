@@ -18,9 +18,9 @@ function ImageSection() {
             <div className="text-content">
                 <h4 data-aos="fade-up">I'm <span>Phan Duy Tâm</span></h4>
                 <div className="dec" data-aos="fade-up" data-aos-delay="200">
-                    djakljsfkljsadkjfsd dfjsddkfldsfj sdjkdsf sjdfjksdfjlsdjfsdldkfsldkdflksđfkjlsd
-                    sdkjfskljfsfklsddf fdsjfsdklfsjdkf sdfkjdsfkd fskfsljskdfklsddfkjdskndsjhjfhwio 
-                    ihfhisffjkjfsakjkjkdsfjasjfsfjsđkfsdfjsdkkjfd.
+                    I am front-end Developer. I am interested in creating user-friendly interfaces,
+                    I'm always learning to improve my skills.
+                    I am a student and have a desire to find a suitable environment to experience.
                 </div>
                 <div className="about-info">
                     <div className="info-title" data-aos="fade-up" data-aos-delay="300">
